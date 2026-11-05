@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>선배, 빼빼로 받아주세요! | 보챠의 빼빼로 대작전</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b243f;--muted:#776f88;--purple:#7652bd;--pink:#e8aecb;--line:#e9e0ee;--paper:#fffafb}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);font-family:'Gowun Dodum',sans-serif;background:radial-gradient(ellipse at 10% 10%,#f6e3f6,transparent 48%),radial-gradient(ellipse at 90% 65%,#e5e7ff,transparent 45%),#f9f6fc}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #a98adc;outline-offset:3px}.wrap{max-width:1030px;margin:auto;padding:24px 18px 65px}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:19px;gap:12px}.logo{font:800 19px Outfit,sans-serif;letter-spacing:-.7px}.logo span{color:var(--purple)}.sub{font-size:12px;color:var(--muted)}.game{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 16px 55px #4f317618}.scene{height:clamp(310px,48vw,510px);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(160deg,#e8d9f1 0%,#f6ced3 52%,#ffeacb 100%)}.scene:before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#27193c7a,transparent 50%);z-index:2;pointer-events:none}.scene-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.scene-pattern{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#fff2 0 3px,transparent 3px 110px)}.ella{position:absolute;bottom:-8%;height:94%;width:auto;max-width:95%;object-fit:contain;filter:drop-shadow(0 10px 18px #563d5950);z-index:1}.fallback-person{position:absolute;z-index:1;bottom:0;font-size:clamp(96px,20vw,200px);opacity:.8}.scene-label{position:absolute;z-index:3;top:19px;left:21px;background:#fffdf5d9;border:1px solid #fff6;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:700;color:#604a76}.scene-caption{position:absolute;bottom:17px;right:20px;z-index:3;color:#fff;font-size:12px;text-shadow:0 1px 5px #39203f}.dialogue{padding:26px 32px 17px;min-height:160px}.name{display:inline-flex;background:#efe5fa;color:var(--purple);padding:5px 13px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:12px}.line{font-size:clamp(16px,2.3vw,19px);white-space:pre-line;line-height:1.9;min-height:60px}.choices{padding:0 32px 31px;display:grid;gap:9px}.choice{display:block;width:100%;text-align:left;background:#faf7fd;color:var(--ink);border:1px solid #e7dfec;border-radius:13px;padding:14px 17px;transition:background .15s,border .15s}.choice:hover{background:#f1e8fb;border-color:#ba9be0}.choice small{display:block;margin-top:4px;color:var(--muted)}.solid{background:var(--purple);color:white;border:0;border-radius:14px;padding:13px 24px;font-weight:700}.solid:hover{background:#6744af}.ghost{background:white;color:var(--ink);border:1px solid #ded2e9;border-radius:14px;padding:12px 19px}.actions{padding:0 32px 30px;display:flex;gap:10px;flex-wrap:wrap}.start-pane{padding:32px;text-align:center}.start-pane h1{margin:12px 0;font-size:clamp(28px,5vw,44px);letter-spacing:-1.5px}.start-pane p{color:var(--muted);line-height:1.8}.start-pane .solid{margin-top:10px}.caption{font-size:12px;color:var(--muted)}.stats-section{max-width:950px;margin:35px auto 0}.stats-title{font-size:24px;margin:10px 0 18px}.stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.stat-card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px}.stat-card h3{margin:0 0 16px;font-size:16px}.stat-entry{margin:0 0 14px}.stat-head{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:5px}.stat-head strong{color:var(--purple);font-family:Outfit}.track{height:8px;border-radius:20px;background:#f2eaf7;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#d3b5eb,#8a69d2);border-radius:20px}.my-choice{color:#7852b6;font-weight:700}.notice{padding:13px 15px;background:#f6f0fa;color:#675779;border-radius:12px;margin:17px 0;font-size:13px}.endbox{text-align:center;padding:26px 32px}.endbox h2{font-size:clamp(25px,4vw,35px);margin:4px 0 9px}.endbox p{line-height:1.9;white-space:pre-line}.badge{display:inline-block;background:#f6e6f4;color:#8054a2;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700}.status{font-size:12px;color:var(--muted);padding-top:8px}.foot{font-size:12px;color:var(--muted);margin-top:20px;text-align:center}.hide{display:none!important}@media(max-width:650px){.wrap{padding:15px 10px 35px}.game{border-radius:17px}.dialogue{padding:19px 19px 12px}.choices{padding:0 18px 23px}.actions{padding:0 18px 24px}.stats-grid{grid-template-columns:1fr}.scene{height:340px}.endbox{padding:23px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header class="topbar"><div class="logo">BOCHA <span>×</span> ELLA <span>♡</span></div><div class="sub">11.11 · 비공식 팬메이드 게임</div></header>
+ <main class="game">
+  <section id="intro" class="start-pane"><div class="badge">PEPERO DAY VISUAL NOVEL</div><h1>선배, 빼빼로 받아주세요! 🍫</h1><p>11월 11일, 엘라 선배에게 마음을 전하고 싶은 보챠.<br>당신의 선택으로 오늘 하루와 엔딩이 달라집니다.</p><button class="solid" id="start">게임 시작하기 →</button><p class="caption">5개 엔딩 · 이미지 없이도 플레이 가능한 프로토타입</p></section>
+  <section id="play" class="hide">
+   <div class="scene" id="scene"><div class="scene-pattern"></div><img class="scene-bg hide" id="bg" alt=""><div class="fallback-person" id="fallback">💜</div><img class="ella hide" id="ella" alt="교복을 입은 엘라 선배"><div class="scene-label" id="sceneLabel"></div><div class="scene-caption" id="sceneCaption"></div></div>
+   <div class="dialogue"><div class="name" id="speaker"></div><div class="line" id="dialogue"></div></div>
+   <div class="choices" id="choices"></div><div class="actions" id="actions"></div>
+  </section>
+  <section id="ending" class="hide"><div class="endbox"><span class="badge" id="endLabel"></span><h2 id="endTitle"></h2><p id="endText"></p><div class="notice" id="unlocks"></div><div class="actions" style="justify-content:center;padding:4px 0 12px"><button class="solid" id="seeStats">다른 보챠들의 선택 보기</button><button class="ghost" id="retry">다시 플레이</button></div><div class="status" id="saveStatus"></div></div></section>
+ </main>
+ <section id="stats" class="stats-section hide"><div class="badge">ENDING CLEAR BONUS</div><h2 class="stats-title">🍫 다른 보챠들은 어떤 선택을 했을까?</h2><p class="caption">엔딩을 본 후에만 열리는 통계 · 총투표수 비공개 · 각 질문별 전체 응답 기준</p><div class="stats-grid" id="statGrid"></div><div class="notice">다시 플레이하면 선택한 내용도 새로운 1회로 집계됩니다. 통계는 개인별 응답을 저장하지 않습니다.</div></section>
+ <footer class="foot">Made with ♡ for BOCHA · 비공식 팬메이드 프로젝트</footer>
+</div>
+<script>
+'use strict';
+/* 나중에 Supabase 연결 시 아래 두 값만 입력. SQL 파일을 먼저 실행하세요. */
+const SUPABASE_URL = '';
+const SUPABASE_PUBLIC_KEY = '';
+
+/* 자신의 이미지 파일을 assets 폴더에 저장한 뒤 경로를 변경하면 됩니다.
+   없는 이미지는 자동으로 숨겨지고 보라색 배경이 표시됩니다. */
+const IMAGES = {
+  ella: 'assets/ella-uniform.png',
+  morning: 'assets/bg-school-gate.png',
+  break: 'assets/bg-classroom.png',
+  lunch: 'assets/bg-cafeteria.png',
+  classroom: 'assets/bg-classroom.png',
+  gym: 'assets/bg-gym.png',
+  field: 'assets/bg-field.png',
+  library: 'assets/bg-library.png',
+  gate: 'assets/bg-school-gate.png'
+};
+const $=id=>document.getElementById(id);
+const choicesMeta=[
+  {title:'등굣길',options:['먼저 인사한다','조용히 지나간다']},
+  {title:'빼빼로',options:['기본 빼빼로','쿠앤크 빼빼로','딸기 빼빼로','녹차 빼빼로','직접 만든 빼빼로']},
+  {title:'점심시간',options:['빼빼로데이인 줄 몰랐어요','그런 건 없거든요']},
+  {title:'방과 후 장소',options:['교실','체육관','운동장','도서관','정문']},
+  {title:'마지막 대사',options:['진심을 전한다','장난스럽게 전한다','끝내 망설인다']},
+  {title:'엔딩',options:['HAPPY','SECRET','COMEDY','NORMAL','BAD']}
+];
+const endingDetails=[
+  {tag:'💕 HAPPY END',title:'선배의 특별한 빼빼로',text:'엘라 선배는 빼빼로를 받아 들고 한참 웃었다.\n“고마워, 보챠. 오늘은 같이 하교할래?”\n이번 11월 11일은 오래 기억될 것 같다.'},
+  {tag:'💜 SECRET END',title:'사실 나도 준비했어',text:'선배가 네가 만든 빼빼로를 바라보다 가방을 뒤적인다.\n“사실... 나도 보챠한테 줄 게 있었는데.”\n서로 준비한 작은 선물이 도서관 책상 위에서 만났다.'},
+  {tag:'😂 COMEDY END',title:'보챠의 농구 대참사',text:'“남아서 주는 거라고? 그럼 농구 한 판 지면 압수야!”\n그 순간 굴러온 농구공에 빼빼로가 하늘로 날아갔다.\n선배의 웃음소리가 체육관에 울려 퍼졌다.'},
+  {tag:'🍫 NORMAL END',title:'친구부터 시작할까요?',text:'“아까는 없다더니~ 그래도 고마워!”\n선배는 빼빼로를 받아 들고 웃었다.\n서툴지만 작은 용기를 낸 하루였다.'},
+  {tag:'💔 BAD END',title:'혼자 먹는 빼빼로',text:'마지막 순간, 끝내 마음을 전하지 못했다.\n집에 돌아온 보챠는 가방 속 빼빼로를 꺼냈다.\n“내년에는... 꼭.”'}
+];
+let step=0; let answers=[null,null,null,null,null];let endingId=null;
+const giftResponses=['“오~ 역시 기본이 근본이지!”','“헐, 쿠앤크! 이거 맛있겠다!”','“딸기? ㅋㅋㅋ 뭔가 귀엽네~”','“녹차?! 보챠 취향 확실한데?”','“잠깐, 직접 만든 거야? 나 주려고?”'];
+const placeLines=[
+  '“보챠? 방과 후 교실로 부르다니. 아까는 없다면서? ㅋㅋㅋ”',
+  '“갑자기 체육관은 왜? 설마 농구 대결 신청하려고?”',
+  '“오늘따라 왜 이렇게 진지해? 나까지 떨리잖아.”',
+  '“쉿, 도서관에서는 조용히 해야지. 무슨 일이야?”',
+  '“어? 보챠, 아직 안 갔어? 나 기다린 거야?”'
+];
+function show(section){['intro','play','ending'].forEach(id=>$(id).classList.toggle('hide',id!==section));window.scrollTo({top:0,behavior:'smooth'});}
+function loadImage(el,path){if(!path){el.classList.add('hide');return;}el.classList.add('hide');el.onload=()=>{el.classList.remove('hide');if(el.id==='ella')$('fallback').classList.add('hide');};el.onerror=()=>{el.classList.add('hide');if(el.id==='ella')$('fallback').classList.remove('hide');};el.src=path;}
+function sceneInfo(key,label){$('sceneLabel').textContent=label;$('sceneCaption').textContent='11월 11일 · 엘라 선배와 보챠';$('fallback').classList.remove('hide');loadImage($('bg'),IMAGES[key]);loadImage($('ella'),IMAGES.ella);}
+function dialogue(speaker,line){$('speaker').textContent=speaker;$('dialogue').textContent=line;}
+function buttons(items){const area=$('choices');area.replaceChildren();items.forEach(({label,description,act})=>{const b=document.createElement('button');b.type='button';b.className='choice';b.textContent=label;if(description){const small=document.createElement('small');small.textContent=description;b.append(small);}b.onclick=act;area.append(b);});$('actions').replaceChildren();}
+function nextButton(label,action){buttons([]);const b=document.createElement('button');b.className='solid';b.textContent=label;b.onclick=action;$('actions').append(b);}
+function select(i){answers[step]=i;const reaction=[
+  ['“어? 보챠잖아! 안녕~ 오늘은 먼저 인사하네? ㅎㅎ”\n선배가 환하게 웃어준다.','“야! 보챠, 너 왜 나 무시하고 지나쳐? ㅋㅋㅋ”\n선배는 삐친 척 팔짱을 낀다.'],
+  ['기본 빼빼로를 가방 깊숙이 넣었다.','쿠앤크 빼빼로를 가방에 넣었다.','딸기 빼빼로를 소중히 챙겼다.','녹차 빼빼로를 조심스레 챙겼다.','밤새 만든 빼빼로가 부서지지 않게 포장했다.'],
+  ['“헐~ 너 정말 바보멍탱구리호박이구나? 그런 것도 모르고!”','“ㅋ? 정말? 어이없네 ㅋ”'],
+  placeLines,
+  ['“...진짜 나 주려고 준비한 거야? 고마워, 보챠.”','“어라~? 츤데레네? ㅋㅋㅋ 그래도 고마워!”','“어? 보챠! 잠깐만! 할 말 있던 거 아니야?”']
+ ][step][i];
+ dialogue(step===1?'보챠의 속마음':'엘라 선배',reaction);
+ nextButton(step===4?'엔딩 확인하기 ✦':'계속하기 →',()=>{step++;if(step===5)finish();else render();});
+}
+function render(){show('play');const scenes=[
+ {key:'morning',label:'CHAPTER 01 · 등굣길',speaker:'보챠의 속마음',line:'멀리서 등교하는 엘라 선배가 보인다.\n인사할까, 말까? 괜히 얼굴이 뜨거워진다.',options:[['엘라 선배에게 먼저 다가가 인사한다','조금 용기를 내 보기'],['수줍은 보챠는 그런 거 몰라! 조용히 지나간다','눈을 마주치지 않고 지나가기']]},
+ {key:'break',label:'CHAPTER 02 · 쉬는 시간',speaker:'보챠의 속마음',line:'같은 반 친구들이 오늘이 빼빼로데이라는 이야기를 한다.\n엘라 선배에게도 하나 줘 볼까? 어떤 걸 준비하지?',options:[['기본 빼빼로','가장 무난하고 평범한 선택'],['쿠앤크 빼빼로','쿠키와 크림의 달콤한 조합'],['딸기 빼빼로','분홍빛 달달한 선물'],['녹차 빼빼로','개성 있는 선택'],['직접 만든 빼빼로','마음을 담아 직접 만든 선물']]},
+ {key:'lunch',label:'CHAPTER 03 · 점심시간',speaker:'엘라 선배',line:'밥을 다 먹고 가려는데 누군가 등을 톡톡 친다.\n돌아보니 엘라 선배다!\n“보챠~ 어디 가? 오늘 빼빼로데이인데, 나한테 줄 건 없어?”',options:[['빼빼로데이인 줄도 몰랐어요...','소심하게 모른 척하기'],['선배한테 줄 빼빼로? 그런 건 없거든요.','괜히 장난스럽게 잡아떼기']]},
+ {key:'field',label:'CHAPTER 04 · 방과 후',speaker:'보챠의 속마음',line:'점심에 그렇게 말했지만 선배가 자꾸 신경 쓰인다.\n오늘이야말로 선배에게 다가갈 시간!\n어디로 선배를 부를까?',options:[['교실','조용히 마음을 전하기'],['체육관','예상치 못한 해프닝이 생길지도'],['운동장','노을 아래에서'],['도서관','작은 목소리로 진심을'],['정문','하교 직전 마지막 기회']]},
+ {key:['classroom','gym','field','library','gate'][answers[3]??0],label:'CHAPTER 05 · 마지막 한마디',speaker:'엘라 선배',line:placeLines[answers[3]??0]+'\n\n보챠의 가방 속에는 아까 준비한 빼빼로가 있다.\n이제 뭐라고 말할까?',options:[['선배를 위해 준비했어요. 받아주세요!','용기 내서 진심 전하기'],['이거 남아서 드리는 거예요. 오해하지 마세요.','괜히 장난스럽게 말하기'],['아, 아무것도 아니에요... 다음에 봬요!','끝내 망설이기']]}
+ ];
+ const s=scenes[step];sceneInfo(s.key,s.label);dialogue(s.speaker,s.line);buttons(s.options.map(([label,description],i)=>({label,description,act:()=>select(i)})));
+}
+function determineEnding(a){
+ const [morning,gift,lunch,place,last]=a;
+ if(last===2)return 4;
+ if(morning===0&&gift===4&&place===3&&last===0)return 1;
+ if(place===1&&last===1)return 2;
+ const affection=(morning===0?2:0)+(gift===4?2:gift===1||gift===2?1:0)+(lunch===0?1:0)+(place===2?1:0)+(last===0?2:0);
+ if(last===0&&affection>=4)return 0;
+ return 3;
+}
+function getUnlocked(){try{return JSON.parse(localStorage.getItem('bocha_ella_ends_v1')||'[]');}catch{return [];}}
+function finish(){endingId=determineEnding(answers);const e=endingDetails[endingId];show('ending');$('stats').classList.add('hide');$('endLabel').textContent=e.tag;$('endTitle').textContent=e.title;$('endText').textContent=e.text+'\n\n'+(answers[4]===2?'가방 속 빼빼로는 결국 전해지지 못했다.':'선배의 손에 건네진 것은 '+choicesMeta[1].options[answers[1]]+'였다.');const unlocked=Array.from(new Set([...getUnlocked(),endingId])).sort();try{localStorage.setItem('bocha_ella_ends_v1',JSON.stringify(unlocked));}catch{}$('unlocks').textContent=`엔딩 수집 ${unlocked.length}/5 · 다시 플레이해서 다른 결말도 찾아보세요!`;$('saveStatus').textContent='';submitVote();}
+const configured=()=>SUPABASE_URL.startsWith('https://')&&SUPABASE_PUBLIC_KEY.startsWith('sb_publishable_');
+async function rpc(name,data){const response=await fetch(`${SUPABASE_URL.replace(/\/$/,'')}/rest/v1/rpc/${name}`,{method:'POST',headers:{apikey:SUPABASE_PUBLIC_KEY,'Content-Type':'application/json'},body:JSON.stringify(data)});if(!response.ok){const detail=await response.text();throw Error(`${response.status}: ${detail.slice(0,180)}`);}return response.status===204?null:response.json();}
+async function submitVote(){if(!configured()){$('saveStatus').textContent='체험 모드 · Supabase 연결 전이라 실제 투표는 저장되지 않습니다.';return;}$('saveStatus').textContent='익명 선택 결과를 저장하는 중...';try{await rpc('submit_pepero_vote',{p_choices:answers});$('saveStatus').textContent='익명 통계에 반영되었습니다.';}catch(error){console.error(error);$('saveStatus').textContent='통계 저장 실패 · 게임과 엔딩 기록은 정상 이용 가능합니다.';}}
+async function showStats(){if(endingId===null)return;$('stats').classList.remove('hide');$('stats').scrollIntoView({behavior:'smooth',block:'start'});if(!configured()){renderStats([],'현재는 체험 모드입니다. Supabase SQL 실행 및 키 설정 후 실제 선택 비율이 표시됩니다.');return;}try{const rows=await rpc('get_pepero_stats',{});renderStats(Array.isArray(rows)?rows:[],'아직 집계된 응답이 없습니다.');}catch(error){console.error(error);renderStats([],'통계 연결에 실패했습니다. SQL 함수 또는 공개 키를 확인해 주세요.');}}
+function renderStats(rows,emptyMessage){const grid=$('statGrid');grid.replaceChildren();choicesMeta.forEach((q,cat)=>{if(cat===4)return;const card=document.createElement('section');card.className='stat-card';const h=document.createElement('h3');h.textContent=`${cat===5?'🏆 엔딩 달성률':`${cat+1}. ${q.title}`}`;card.append(h);const records=rows.filter(r=>Number(r.category)===cat);if(!records.length){const p=document.createElement('p');p.className='caption';p.textContent=emptyMessage;card.append(p);}records.forEach(r=>{const i=Number(r.option_index);if(!Number.isInteger(i)||i<0||i>=q.options.length)return;const percentage=Math.max(0,Math.min(100,Number(r.percentage)||0));const mine=cat===5?i===endingId:i===answers[cat];const secret=cat===5&&i===1&&!getUnlocked().includes(1);const div=document.createElement('div');div.className='stat-entry';const head=document.createElement('div');head.className='stat-head';const name=document.createElement('span');name.textContent=(secret?'??? END':q.options[i])+(mine?' · 내 선택 ✦':'');if(mine)name.className='my-choice';const percent=document.createElement('strong');percent.textContent=`${percentage.toFixed(1)}%`;head.append(name,percent);const track=document.createElement('div');track.className='track';const fill=document.createElement('div');fill.className='fill';fill.style.width=`${percentage}%`;track.append(fill);div.append(head,track);card.append(div);});grid.append(card);});}
+$('start').onclick=()=>{step=0;answers=[null,null,null,null,null];endingId=null;$('stats').classList.add('hide');render();};$('retry').onclick=()=>{step=0;answers=[null,null,null,null,null];endingId=null;$('stats').classList.add('hide');render();};$('seeStats').onclick=showStats;
+</script>
+</body>
+</html>
